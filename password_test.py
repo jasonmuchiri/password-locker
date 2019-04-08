@@ -10,10 +10,17 @@ class TestPassword(unittest.TestCase):
          unittest.TestCase: TestCase class that helps in creating test cases
     '''
 
-    def setup(self):
+    def setUp(self):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_password = Password("jasonmk","RJXP2I5") # create contact object
+        self.new_password = Password("jasonmk","RJXP2I5") # create password object
 
-    
+    def test_init(self):
+        '''
+        test_init test case to rest if the object is initialized properly
+        '''
+
+        self.assertEqual(self.new_password.user_name,"jasonmk")
+        self.assertEqual(self.new_password.pass_word,"RJXP2I5")
+     
