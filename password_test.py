@@ -23,4 +23,6 @@ class TestPassword(unittest.TestCase):
 
         self.assertEqual(self.new_password.user_name,"jasonmk")
         self.assertEqual(self.new_password.pass_word,"RJXP2I5")
-     
+
+if __name__ == '__main__':
+    unittest.main()        
