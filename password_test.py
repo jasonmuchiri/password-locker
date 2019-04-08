@@ -70,5 +70,12 @@ class TestPassword(unittest.TestCase):
         password_exists = Password.password_exist("jasonmk") 
         self.assertTrue(password_exists)
 
+    def test_display_all_passwords(self):
+        '''
+        method that returns a list of all passwords saved
+        '''
+
+        self.assertEqual(Password.display_passwords(),Password.password_locker)    
+
 if __name__ == '__main__':
     unittest.main()        

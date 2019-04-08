@@ -38,3 +38,10 @@ class Password:
                 return True
 
         return False
+
+    @classmethod
+    def display_passwords(cls):
+        '''
+        method that returns the passwords
+        '''
+        return cls.password_locker
