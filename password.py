@@ -24,4 +24,17 @@ class Password:
 
         Password.password_locker.remove(self)
 
-    
+    @classmethod
+    def password_exist(cls,user_name):
+        '''
+        Method that checks if a password exists from the password_locker.
+        Args:
+             username: user name to search if it exists
+        Returns:
+            Boolean: True or false depending if  the password exists
+        '''
+        for password in cls.password_locker:
+            if password.user_name == user_name:
+                return True
+
+        return False
