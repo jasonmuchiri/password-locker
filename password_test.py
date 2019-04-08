@@ -15,6 +15,8 @@ class TestPassword(unittest.TestCase):
         Set up method to run before each test cases.
         '''
         self.new_password = Password("jasonmk","RJXP2I5") # create password object
+    
+    
 
     def test_init(self):
         '''
@@ -30,6 +32,16 @@ class TestPassword(unittest.TestCase):
         '''
         self.new_password.save_password() # saving the new password
         self.assertEqual(len(Password.password_locker),1)
+
+    def test_save_multiple_password(self):
+        '''
+        test_save_multiple_password to check if we can save multiple password
+        objects to our password-locker
+        '''
+        self.new_password.save_password()
+        test_password = Password("bongonati","W1E2E3D")
+        test_password.save_password()
+        self.assertEqual(len(Password.password_locker),2)
 
 if __name__ == '__main__':
     unittest.main()        
