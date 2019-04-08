@@ -24,7 +24,10 @@ To start using this project use the following commands:
 
 |Behaviour|Input Example|Output Example|
 |---------|-------------|--------------|
-|create a new password(cp)|usename:jasonmk  password:A4P299D|New Password jasonmk A4P299D created|display passwords|dp|Here is a list of all your passwords ()|delete a password|dp|this password has been successfully deleted|exit|ex|Bye...|
+|create a new password(cp)|usename:jasonmk  password:A4P299D|New Password jasonmk A4P299D created|
+|display passwords|dp|Here is a list of all your passwords ()|
+|delete a password|dp|this password has been successfully deleted|
+|exit|ex|Bye...|
 
 ## Contacts
 
