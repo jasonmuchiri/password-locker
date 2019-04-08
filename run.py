@@ -33,8 +33,26 @@ def display_passwords():
     return Password.display_passwords()
 
 def main():
-    print("Hello Welcome to your password locker.What is your name?")
-       
-      
+    print("Hello Welcome to your password locker. What is your name?")
+    user_name = input()
 
-  
+    print(f"Hello {user_name}. What would you like to do?")
+    print('\n')
+
+    while True:
+        print("Use these short codes : cp - create a new password, dp - display passwords, ex - exit the password locker ")
+        short_code = input().lower()
+        if short_code == 'cp':
+            print("New Password")
+            print("-"*10)
+
+            print("Username ...")
+            user_name = input()
+
+            print("Password ...")
+            pass_word = input()
+
+            save_passwords(create_password(user_name,pass_word))
+            print('\n')
+            print(f"New Password {user_name} {pass_word} created")
+            print ('\n')    
