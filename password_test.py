@@ -58,5 +58,18 @@ class TestPassword(unittest.TestCase):
         self.new_password.delete_password() 
         self.assertEqual(len(Password.password_locker),1)
 
+    def test_find_password_by_user_name(self):
+        '''
+        test to check if we can find a password by username and display information
+        '''
+
+        self.new_password.save_password()
+        test_password = Password("jasonmk","RJXP2I5")
+        test_password.save_password()
+
+        found_password = Password.find_by_user_name("jasonmk")
+
+        self.assertEqual(found_password,test-password)  
+
 if __name__ == '__main__':
     unittest.main()        
