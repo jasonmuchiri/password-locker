@@ -14,3 +14,6 @@ class TestPassword(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
+        self.new_password = Password("jasonmk","RJXP2I5") # create contact object
+
+    
