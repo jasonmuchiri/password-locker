@@ -55,4 +55,21 @@ def main():
             save_passwords(create_password(user_name,pass_word))
             print('\n')
             print(f"New Password {user_name} {pass_word} created")
-            print ('\n')    
+            print ('\n')
+
+        elif short_code == 'dp':
+            if display_passwords():
+                print("Here is a list of all your passwords")
+                print('\n')
+                for password in display_passwords():
+                    print(f"{password.user_name} {password.pass_word}")
+                print('\n')
+            else:
+                print('\n')
+                print("You don't seem to have any passwords saved yet")
+                print('\n')
+        elif short_code == "ex":
+            print("Bye .....")
+            break
+        else:
+            print("I really didn't get that. Please use the short codes")                                                
