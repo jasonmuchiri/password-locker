@@ -24,5 +24,12 @@ class TestPassword(unittest.TestCase):
         self.assertEqual(self.new_password.user_name,"jasonmk")
         self.assertEqual(self.new_password.pass_word,"RJXP2I5")
 
+    def test_save_password(self):
+        '''
+        test_save_pasword test case to test if the password object is saved into the password locker
+        '''
+        self.new_password.save_password() # saving the new password
+        self.assertEqual(len(Password.password_locker),1)
+
 if __name__ == '__main__':
     unittest.main()        
