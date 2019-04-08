@@ -78,14 +78,7 @@ class TestPassword(unittest.TestCase):
         '''
 
         self.assertEqual(Password.display_passwords(),Password.password_locker)  
-
-    def test_copy_pass_word(self):
-        '''
-        Test to confirm that we are copying the password from a found username
-        '''
-        self.new_password.save_password()
-        Password.copy_pass_word("jasonmk") 
-        self.assertEqual(self.new_password.pass_word,pyperclip.paste())      
+         
 
 if __name__ == '__main__':
     unittest.main()        
