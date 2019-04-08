@@ -22,4 +22,6 @@ class Password:
         delete_password method deletes a saved password from the password_locker
         '''
 
-        Password.password_locker.remove(self)        
+        Password.password_locker.remove(self)
+
+    
