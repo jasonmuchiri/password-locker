@@ -16,7 +16,11 @@ class TestPassword(unittest.TestCase):
         '''
         self.new_password = Password("jasonmk","RJXP2I5") # create password object
     
-    
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test case has run.
+        '''
+        Password.password_locker = []
 
     def test_init(self):
         '''
