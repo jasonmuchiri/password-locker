@@ -1,3 +1,5 @@
+import pyperclip
+
 class Password:
     '''
     Class that generates new instances of passwords
@@ -45,3 +47,7 @@ class Password:
         method that returns the passwords
         '''
         return cls.password_locker
+
+    @classmethod
+    def copy_pass_word(cls,user_name):
+        pyperclip.copy()    
