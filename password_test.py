@@ -43,9 +43,20 @@ class TestPassword(unittest.TestCase):
         objects to our password-locker
         '''
         self.new_password.save_password()
-        test_password = Password("bongonati","W1E2E3D")
+        test_password = Password("jasonmk","RJXP2I5")
         test_password.save_password()
         self.assertEqual(len(Password.password_locker),2)
+    
+    def test_delete_password(self):
+        '''
+        test_delete_password to test if we can remove a password from our password_locker
+        '''
+        self.new_password.save_password()
+        test_password = Password("jasonmk","RJXP2I5")
+        test_password.save_password()
+
+        self.new_password.delete_password() 
+        self.assertEqual(len(Password.password_locker),1)
 
 if __name__ == '__main__':
     unittest.main()        

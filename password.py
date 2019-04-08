@@ -15,4 +15,11 @@ class Password:
         save_password method saves password objects into password_locker
         '''
 
-        Password.password_locker.append(self)    
+        Password.password_locker.append(self)
+
+    def delete_password(self):
+        '''
+        delete_password method deletes a saved password from the password_locker
+        '''
+
+        Password.password_locker.remove(self)        
