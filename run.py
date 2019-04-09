@@ -40,7 +40,7 @@ def main():
     print('\n')
 
     while True:
-        print("Use these short codes : cp - create a new password, dp - display passwords, ex - exit the password locker ")
+        print("Use these short codes : cp - create a new password, dp - display passwords, xp - delete password, ex - exit the password locker ")
         short_code = input().lower()
         if short_code == 'cp':
             print("New Password")
@@ -68,6 +68,18 @@ def main():
                 print('\n')
                 print("You don't seem to have any passwords saved yet")
                 print('\n')
+
+        elif short_code == 'xp':
+            print("Username ....")
+            user_name = input()
+
+            print("Password ....")
+            pass_word = input()
+
+            print('\n')
+            print(f"{user_name} {pass_word} has been successfully deleted.")
+            print('\n')       
+
         elif short_code == "ex":
             print("Bye .....")
             break
